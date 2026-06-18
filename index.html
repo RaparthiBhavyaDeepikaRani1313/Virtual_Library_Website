@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Library</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("https://thumbs.dreamstime.com/b/futuristic-digital-library-showing-augmented-reality-book-data-open-floating-displaying-information-captivating-356988575.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #f0c040;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>📚 Virtual Library</h1>
+      <nav>
+        <a href="#" onclick="navigate('home.html')">Home</a>
+        <a href="#" onclick="navigate('books.html')">Books</a>
+        <a href="#" onclick="navigate('rent.html')">Rent</a>
+        <a href="#" onclick="navigate('about.html')">About</a>
+        <a href="#" onclick="navigate('profile.html')">Profile</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 style="text-align: center; margin-top: 120px; padding-top: 120px; color: white; font-size: 80px;">
+      Welcome to the Virtual Library!
+    </h1>
+  </main>
+
+  <script>
+    function navigate(url) {
+      const isLoggedIn = localStorage.getItem("loggedInEmail") && localStorage.getItem("loggedInUsername");
+
+      if (!isLoggedIn) {
+        alert("Please log in first!");
+        window.location.href = "login.html";
+      } else {
+        window.location.href = url;
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #f0c040;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .book-details, .reviews-section {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .book-details img {
+            max-width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .rented-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .rented-item img {
+            width: 60px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        select, button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .confirm-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .clear-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .clear-btn:hover {
+            background-color: #c82333;
+        }
+
+        .confirm-btn:hover {
+            background-color: #218838;
+        }
+
+        .reviews-section {
+            margin-top: 30px;
+        }
+
+        .reviews-section .review-item {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .rented-books-section {
+            margin-top: 50px;
+        }
+
+        .rented-books-section h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>📚 Virtual Library</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="rent.html">Rent</a>
+                <a href="about.html">About</a>
+                <a href="profile.html">Profile</a>
+                <a href="logout.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <h1>📝 Book Rent Summary</h1>
+
+    <!-- Section for selected book -->
+    <div class="book-details" id="bookDetails">
+        <h2>Selected Book</h2>
+        <div id="selectedBook">Loading book details...</div>
+        <button class="confirm-btn" onclick="confirmRent()">Confirm Rent Now</button>
+    </div>
+
+    <!-- Section for displaying reviews -->
+    <div class="reviews-section" id="reviewsContainer">
+        <h2>📢 User Reviews</h2>
+        <div id="reviewsContent">No reviews yet.</div>
+
+        <h3>✍️ Write a Review</h3>
+        <textarea id="reviewText" rows="4" placeholder="Write your review here..."></textarea><br>
+        <label for="rating">Rating:</label>
+        <select id="rating">
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+        </select><br>
+        <button onclick="submitReview()">Submit Review</button>
+    </div>
+
+    <!-- Section for displaying previously rented books -->
+    <div class="rented-books-section" id="rentedBooksSection">
+        <h2>📖 Previously Rented Books</h2>
+        <div id="rentedBooksList">No rented books yet.</div>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+                title: urlParams.get("title"),
+                author: urlParams.get("author"),
+                description: urlParams.get("description"),
+                image: urlParams.get("image"),
+                price: urlParams.get("price")
+            };
+        }
+
+        // Function to display previously rented books
+        function displayRentedBooks() {
+            const email = localStorage.getItem("loggedInEmail");
+            const rentedBooksList = document.getElementById("rentedBooksList");
+            rentedBooksList.innerHTML = "";
+
+            if (!email) {
+                rentedBooksList.textContent = "Please log in to view rented books.";
+                return;
+            }
+
+            fetch(`http://localhost:3000/api/rented-books?email=${encodeURIComponent(email)}`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data.success || !data.books || data.books.length === 0) {
+                    rentedBooksList.textContent = "No rented books yet.";
+                    return;
+                }
+
+                data.books.forEach(book => {
+                    // Replace special characters to avoid syntax errors in inline JS
+                    const escapedTitleForJS = book.title.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                    // ID friendly title without spaces
+                    const idFriendlyTitle = book.title.replace(/[^a-zA-Z0-9]/g, "_");
+
+                    rentedBooksList.innerHTML += `
+                        <div class="rented-item">
+                            <img src="${book.image}" alt="${book.title}">
+                            <div>
+                                <h3>${book.title}</h3>
+                                <p><strong>Author:</strong> ${book.author}</p>
+                                <p><strong>Rented On:</strong> ${book.rentedOn}</p>
+                                <button onclick="showReviewOption('${idFriendlyTitle}')">Write Review</button>
+                                <div id="reviewForm_${idFriendlyTitle}" style="display: none; margin-top: 10px;">
+                                    <textarea id="reviewText_${idFriendlyTitle}" rows="4" placeholder="Write your review here..."></textarea><br>
+                                    <label for="rating_${idFriendlyTitle}">Rating:</label>
+                                    <select id="rating_${idFriendlyTitle}">
+                                        <option value="5">⭐⭐⭐⭐⭐</option>
+                                        <option value="4">⭐⭐⭐⭐</option>
+                                        <option value="3">⭐⭐⭐</option>
+                                        <option value="2">⭐⭐</option>
+                                        <option value="1">⭐</option>
+                                    </select><br>
+                                    <button onclick="submitReviewForRentedBook('${escapedTitleForJS}', '${idFriendlyTitle}')">Submit Review</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            })
+            .catch(err => {
+                console.error("Error fetching rented books:", err);
+                rentedBooksList.textContent = "Error loading rented books from server.";
+            });
+        }
+
+        // Function to display reviews for the selected book
+        function displayReviews(title) {
+            const container = document.getElementById("reviewsContent");
+            container.innerHTML = "";
+
+            if (!title) return;
+
+            fetch(`http://localhost:3000/api/reviews?title=${encodeURIComponent(title)}`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data.success || !data.reviews || data.reviews.length === 0) {
+                    container.textContent = "No reviews yet.";
+                    return;
+                }
+
+                data.reviews.forEach(r => {
+                    const reviewer = r.userEmail ? r.userEmail.split("@")[0] : "anonymous";
+                    container.innerHTML += `
+                        <div class="review-item">
+                            <strong>Rating:</strong> ${"⭐".repeat(r.rating)}<br>
+                            <em>"${r.review}"</em>
+                            <div style="font-size: 12px; color: #666; margin-top: 5px;">
+                                By: ${reviewer} on ${r.createdAt}
+                            </div>
+                        </div>
+                    `;
+                });
+            })
+            .catch(err => {
+                console.error("Error fetching reviews:", err);
+                container.textContent = "Error loading reviews.";
+            });
+        }
+
+        // Function to submit a review for the selected book
+        function submitReview() {
+            const reviewText = document.getElementById("reviewText").value.trim();
+            const rating = parseInt(document.getElementById("rating").value);
+            const book = getParams();
+            const email = localStorage.getItem("loggedInEmail");
+
+            if (!reviewText) {
+                alert("Please write a review before submitting.");
+                return;
+            }
+
+            if (!book.title) {
+                alert("No book selected to review.");
+                return;
+            }
+
+            fetch('http://localhost:3000/api/reviews', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    title: book.title,
+                    userEmail: email || 'anonymous',
+                    reviewText: reviewText,
+                    rating: rating
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("reviewText").value = "";
+                    displayReviews(book.title);
+                } else {
+                    alert(data.error || "Failed to submit review.");
+                }
+            })
+            .catch(err => {
+                console.error("Error submitting review:", err);
+                alert("Server error. Failed to submit review.");
+            });
+        }
+
+        // Function to display the review form for rented books
+        function showReviewOption(idFriendlyTitle) {
+            const reviewForm = document.getElementById(`reviewForm_${idFriendlyTitle}`);
+            reviewForm.style.display = reviewForm.style.display === "none" ? "block" : "none";
+        }
+
+        // Function to submit a review for a rented book
+        function submitReviewForRentedBook(bookTitle, idFriendlyTitle) {
+            const reviewText = document.getElementById(`reviewText_${idFriendlyTitle}`).value.trim();
+            const rating = parseInt(document.getElementById(`rating_${idFriendlyTitle}`).value);
+            const email = localStorage.getItem("loggedInEmail");
+
+            if (!reviewText) {
+                alert("Please write a review before submitting.");
+                return;
+            }
+
+            fetch('http://localhost:3000/api/reviews', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    title: bookTitle,
+                    userEmail: email || 'anonymous',
+                    reviewText: reviewText,
+                    rating: rating
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById(`reviewText_${idFriendlyTitle}`).value = "";
+                    document.getElementById(`reviewForm_${idFriendlyTitle}`).style.display = "none";
+                    
+                    const currentBook = getParams();
+                    if (currentBook.title === bookTitle) {
+                        displayReviews(bookTitle);
+                    } else {
+                        alert("Review submitted successfully!");
+                    }
+                } else {
+                    alert(data.error || "Failed to submit review.");
+                }
+            })
+            .catch(err => {
+                console.error("Error submitting review:", err);
+                alert("Server error. Failed to submit review.");
+            });
+        }
+
+        // Function to confirm rental of a book
+        function confirmRent() {
+            const book = getParams();
+            const email = localStorage.getItem("loggedInEmail");
+
+            if (!email) {
+                alert("Please log in first!");
+                window.location.href = "login.html";
+                return;
+            }
+
+            if (!book.title) {
+                alert("No book selected. Please select a book to rent.");
+                return;
+            }
+
+            fetch('http://localhost:3000/api/rent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    title: book.title,
+                    author: book.author,
+                    description: book.description,
+                    image: book.image,
+                    price: book.price
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert(`You have successfully rented "${book.title}"!`);
+                    displayRentedBooks();
+                } else {
+                    alert(data.error || "Failed to rent book.");
+                }
+            })
+            .catch(err => {
+                console.error("Error renting book:", err);
+                alert("Server error. Failed to rent book.");
+            });
+        }
+
+        // Initialize page on load
+        window.onload = function () {
+            const book = getParams();
+
+            // Display selected book details
+            if (book.title) {
+                document.getElementById("selectedBook").innerHTML = `
+                    <img src="${book.image}" alt="${book.title}">
+                    <h3>${book.title}</h3>
+                    <p><strong>Author:</strong> ${book.author}</p>
+                    <p><strong>Description:</strong> ${book.description}</p>
+                    <p><strong>Price:</strong> ₹${book.price}</p>
+                `;
+                displayReviews(book.title);
+            } else {
+                document.getElementById("selectedBook").innerText = "No book data found.";
+            }
+
+            // Display previously rented books
+            displayRentedBooks();
+        };
+    </script>
+
+</body>
+
+</html>

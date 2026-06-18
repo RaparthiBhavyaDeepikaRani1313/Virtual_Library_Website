@@ -1,0 +1,35 @@
+<?php
+include 'config.php';
+
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+// Basic validation
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  echo "Invalid email format.";
+  exit;
+}
+
+if (!preg_match('/^\d{6}$/', $password)) {
+  echo "Password must be a 6-digit number.";
+  exit;
+}
+
+// Check if user already exists
+$sql = "SELECT * FROM users WHERE email='$email'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  echo "Email already registered.";
+  exit;
+}
+
+// Insert new user
+$sql = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
+if ($conn->query($sql) === TRUE) {
+  echo "success";
+} else {
+  echo "Error: " . $conn->error;
+}
+
+$conn->close();
+?>

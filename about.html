@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Virtual Library</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    .about-container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-container h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .section img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .section p {
+      flex: 1;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #f0c040;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>📚 Virtual Library</h1>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="rent.html">Rent</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">profile</a>
+        <a href="logout.html">Logout</a>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="about-container">
+    <h2>About Virtual Library</h2>
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=600&q=80"
+        alt="Library Shelf" />
+      <p>
+        Virtual Library is your gateway to knowledge. We offer thousands of digital books, journals, and resources
+        that you can access from anywhere in the world. Our mission is to make learning easy, flexible, and accessible.
+      </p>
+    </div>
+
+    <div class="section">
+      <p>
+        Our platform is designed for students, educators, professionals, and book lovers of all kinds. Whether you're
+        looking for academic material, trending novels, or research resources — we've got you covered.
+      </p>
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80"
+        alt="Person Reading" />
+    </div>
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=600&q=80" />
+      <p>
+        Join us and experience the future of libraries. All you need is a device and an internet connection
+        to explore a universe of content at your fingertips!
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

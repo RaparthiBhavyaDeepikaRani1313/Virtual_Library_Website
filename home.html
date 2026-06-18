@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Virtual Library</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=cover&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f0c040;
+    }
+
+    .hero {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 100px 30px 80px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 140px auto 0; /* Space below fixed header */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+      color: #f0c040;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: white;
+      max-width: 600px;
+      margin: 20px auto;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    .hero a {
+      background-color: #f0c040;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .hero a:hover {
+      background-color: #e5b72f;
+      transform: translateY(-5px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>📚 Virtual Library</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="rent.html">Rent</a>
+      <a href="about.html">About</a>
+      <a href="profile.html">Profile</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>Welcome to Your Virtual Library</h2>
+  <p>Discover a world of knowledge! Browse thousands of books, from fiction to non-fiction, and rent them with ease—all from the comfort of your home.</p>
+  <a href="books.html">Explore Books</a>
+</section>
+
+</body>
+</html>

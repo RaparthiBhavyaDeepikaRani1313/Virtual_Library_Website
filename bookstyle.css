@@ -1,0 +1,181 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    padding: 20px;
+}
+.Fiction
+{
+    background:linear-gradient(to right,rgb(0, 255, 200),rgb(27, 64, 198));
+    margin-top:0px;
+}
+.literary-fiction
+{
+    background:linear-gradient(to right,navy,gold);
+    margin-top:0px;
+}
+.triller
+{
+    background:linear-gradient(to right,black,crimson);
+    margin-top:0px;
+}
+.fantasy{
+    background:linear-gradient(to right,rgb(73, 153, 73),silver);
+}
+.science
+{
+    background:linear-gradient(to right,indigo,cyan,black);
+}
+.history
+{
+    background:linear-gradient(to right,slateblue,brown);
+}
+.romance
+{
+    background:linear-gradient(to right,red,ivory);
+}
+.biography
+{
+    background:linear-gradient(to right,maroon,rgb(5, 56, 5));
+}
+.self-help
+{
+    background:linear-gradient(to right,lavender,coral);
+}
+.psychology
+{
+    background:linear-gradient(to right,lavender,rgb(101, 215, 240));
+}
+.travel
+{
+    background:linear-gradient(to right,turquoise,rgb(172, 94, 42));
+}
+.religious
+{
+    background:linear-gradient(to right,royalblue,silver); 
+}
+.kids
+{
+    background:linear-gradient(to right,pink,purple);
+}
+.comics
+{
+    background:linear-gradient(to right,#4B0082,orange);
+}
+.category-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top:5px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    display: inline-block;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.book-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.book-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+}
+
+.book-card p {
+    font-size: 0.9rem;
+    margin: 4px 0;
+}
+
+.book-card button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #fcb69f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #fcb69f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+}
+
+.hidden-books {
+    display: none;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #f0c040;
+}

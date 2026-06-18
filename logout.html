@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logging Out...</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .message {
+      text-align: center;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .message h2 {
+      color: #333;
+    }
+
+    .message p {
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h2>Logging you out...</h2>
+    <p>You will be redirected shortly.</p>
+  </div>
+
+  <script>
+    // Logout functionality
+    localStorage.removeItem("loggedInEmail");
+    localStorage.removeItem("loggedInUsername");
+
+    // Optional: also clear other session data
+    // localStorage.clear(); // Uncomment if you want to clear everything
+
+    // Redirect after 2 seconds
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 2000);
+  </script>
+</body>
+</html>

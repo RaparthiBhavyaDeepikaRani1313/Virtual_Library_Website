@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiction Books</title>
+    <link rel="stylesheet" href="bookstyle.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>📚 Virtual Library</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="rent.html">Rent</a>
+                <a href="about.html">About</a>
+                <a href="profile.html">Profile</a>
+                <a href="logout.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <section class="Fiction">
+        <div class="category-title">Fiction</div>
+
+        <section class="book-container">
+            <div class="book-grid">
+                <!-- First 10 Book Cards -->
+                <!-- Book 1 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10512502-L.jpg" alt="The Great Gatsby">
+                    <h3>The Great Gatsby</h3>
+                    <p>F. Scott Fitzgerald</p>
+                    <p>A tragic story of love and ambition set in the Jazz Age.</p>
+                    <button
+                        onclick="rentBook('The Great Gatsby', 'F. Scott Fitzgerald', 'A tragic story of love and ambition set in the Jazz Age.', 'https://covers.openlibrary.org/b/id/10512502-L.jpg', 120)">Rent
+                        Now</button>
+                </div>
+                <script>
+                    function rentBook(title, author, description, image, price) {
+                        const url = new URL('rent.html', window.location.href);
+                        url.searchParams.set('title', title);
+                        url.searchParams.set('author', author);
+                        url.searchParams.set('description', description);
+                        url.searchParams.set('image', image);
+                        url.searchParams.set('price', price);
+                        window.location.href = url.toString();
+                    }
+
+
+                </script>
+                <!-- Book 2 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/11140174-L.jpg" alt="To Kill a Mockingbird">
+                    <h3>To Kill a Mockingbird</h3>
+                    <p>Harper Lee</p>
+                    <p>A tale of racial injustice and childhood in the Deep South.</p>
+                    <button
+                        onclick="rentBook('To Kill a Mockingbird', 'Harper Lee', 'A tale of racial injustice and childhood in the Deep South.','https://covers.openlibrary.org/b/id/11140174-L.jpg', 150)">Rent
+                        Now</button>
+                </div>
+                <script>
+                    function rentBook(title, author, description, image, price) {
+                        const url = new URL('rent.html', window.location.href);
+                        url.searchParams.set('title', title);
+                        url.searchParams.set('author', author);
+                        url.searchParams.set('description', description);
+                        url.searchParams.set('image', image);
+                        url.searchParams.set('price', price);
+                        window.location.href = url.toString();
+                    }
+
+
+                </script>
+                <!-- Book 3 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/8225263-L.jpg" alt="1984">
+                    <h3>1984</h3>
+                    <p>George Orwell</p>
+                    <p>A dystopian novel about totalitarianism and surveillance.</p>
+                    <button
+                        onclick="rentBook('1984', 'George Orwell', 'A dystopian novel about totalitarianism and surveillance.','https://covers.openlibrary.org/b/id/8225263-L.jpg', 110)">Rent
+                        Now</button>
+                </div>
+                <script>
+                    function rentBook(title, author, description, image, price) {
+                        const url = new URL('rent.html', window.location.href);
+                        url.searchParams.set('title', title);
+                        url.searchParams.set('author', author);
+                        url.searchParams.set('description', description);
+                        url.searchParams.set('image', image);
+                        url.searchParams.set('price', price);
+                        window.location.href = url.toString();
+                    }
+
+
+                </script>
+
+                <!-- Book 4 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/8316916-L.jpg" alt="The Catcher in the Rye">
+                    <h3>The Catcher in the Rye</h3>
+                    <p>J.D. Salinger</p>
+                    <p>Holden Caulfield’s story of teenage angst and alienation.</p>
+                    <button
+                        onclick="rentBook('The Catcher in the Rye', 'J.D. Salinger', 'Holden Caulfield’s story of teenage angst and alienation.','https://covers.openlibrary.org/b/id/8316916-L.jpg', 200)">Rent
+                        Now</button>
+                </div>
+                <script>
+                    function rentBook(title, author, description, image, price) {
+                        const url = new URL('rent.html', window.location.href);
+                        url.searchParams.set('title', title);
+                        url.searchParams.set('author', author);
+                        url.searchParams.set('description', description);
+                        url.searchParams.set('image', image);
+                        url.searchParams.set('price', price);
+                        window.location.href = url.toString();
+                    }
+
+
+                </script>
+                <!-- Book 5 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/11128898-L.jpg" alt="Pride and Prejudice">
+                    <h3>Pride and Prejudice</h3>
+                    <p>Jane Austen</p>
+                    <p>A romantic tale about love and society’s expectations.</p>
+                    <button
+                        onclick="rentBook('Pride and Prejudice', 'Jane Austen', 'A romantic tale about love and society’s expectations.','https://covers.openlibrary.org/b/id/11128898-L.jpg',200)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+
+                    </script>
+
+                </div>
+                <!-- Book 6 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/11111797-L.jpg" alt="The Book Thief">
+                    <h3>The Book Thief</h3>
+                    <p>Markus Zusak</p>
+                    <p>A girl who finds solace in books during WWII Germany.</p>
+                    <button
+                        onclick="rentBook('The Book Thief', 'Markus Zusak', 'A girl who finds solace in books during WWII Germany.','https://covers.openlibrary.org/b/id/11111797-L.jpg',110)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+
+                    </script>
+
+                </div>
+                <!-- Book 7 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10958340-L.jpg" alt="The Kite Runner">
+                    <h3>The Kite Runner</h3>
+                    <p>Khaled Hosseini</p>
+                    <p>A story of friendship and redemption in Afghanistan.</p>
+                    <button
+                        onclick="rentBook('The Kite Runner', 'Khaled Hosseini', 'A story of friendship and redemption in Afghanistan.','https://covers.openlibrary.org/b/id/10958340-L.jpg',210)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+                <!-- Book 8 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/11128438-L.jpg" alt="Life of Pi">
+                    <h3>Life of Pi</h3>
+                    <p>Yann Martel</p>
+                    <p>A boy’s survival at sea with a Bengal tiger.</p>
+                    <button
+                        onclick="rentBook('Life of Pi', 'Yann Martel', 'A boy’s survival at sea with a Bengal tiger.','https://covers.openlibrary.org/b/id/11128438-L.jpg',250)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+
+                </div>
+                <!-- Book 9 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/11110122-L.jpg" alt="The Alchemist">
+                    <h3>The Alchemist</h3>
+                    <p>Paulo Coelho</p>
+                    <p>A journey of self-discovery and destiny.</p>
+                    <button
+                        onclick="rentBook('The Alchemist', 'Paulo Coelho', 'A journey of self-discovery and destiny.','https://covers.openlibrary.org/b/id/11110122-L.jpg',200)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+                <!-- Book 10 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10898171-L.jpg" alt="A Thousand Splendid Suns">
+                    <h3>A Thousand Splendid Suns</h3>
+                    <p>Khaled Hosseini</p>
+                    <p>A heart-wrenching story of Afghan women’s lives.</p>
+                    <button
+                        onclick="rentBook('A Thousand Splendid Suns', 'Khaled Hosseini', 'A heart-wrenching story of Afghan women’s lives.','https://covers.openlibrary.org/b/id/10898171-L.jpg',250)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+            </div>
+
+            <!-- Hidden Books -->
+            <div class="book-grid hidden-books" id="hiddenBooks">
+                <!-- Books 11-20 -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/8226191-L.jpg" alt="Beloved">
+                    <h3>Beloved</h3>
+                    <p>Toni Morrison</p>
+                    <p>A powerful novel on slavery and motherhood.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10514838-L.jpg" alt="The Road">
+                    <h3>The Road</h3>
+                    <p>Cormac McCarthy</p>
+                    <p>A father and son’s survival in a post-apocalyptic world.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10508443-L.jpg" alt="Where the Crawdads Sing">
+                    <h3>Where the Crawdads Sing</h3>
+                    <p>Delia Owens</p>
+                    <p>A coming-of-age mystery in North Carolina’s marshes.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10522557-L.jpg" alt="The Night Circus">
+                    <h3>The Night Circus</h3>
+                    <p>Erin Morgenstern</p>
+                    <p>A magical competition between two illusionists.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/8231859-L.jpg" alt="The Goldfinch">
+                    <h3>The Goldfinch</h3>
+                    <p>Donna Tartt</p>
+                    <p>A tale of art, loss, and a stolen masterpiece.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10520928-L.jpg" alt="Normal People">
+                    <h3>Normal People</h3>
+                    <p>Sally Rooney</p>
+                    <p>An intense story of love, class, and personal growth.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10930000-L.jpg" alt="Circe">
+                    <h3>Circe</h3>
+                    <p>Madeline Miller</p>
+                    <p>The story of a powerful witch from Greek mythology.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/11114620-L.jpg" alt="Little Fires Everywhere">
+                    <h3>Little Fires Everywhere</h3>
+                    <p>Celeste Ng</p>
+                    <p>Secrets and motherhood in a picture-perfect suburb.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10514228-L.jpg" alt="The Midnight Library">
+                    <h3>The Midnight Library</h3>
+                    <p>Matt Haig</p>
+                    <p>A library between life and death offering alternate lives.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10621672-L.jpg" alt="The Silent Patient">
+                    <h3>The Silent Patient</h3>
+                    <p>Alex Michaelides</p>
+                    <p>A woman’s silence after a shocking crime.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+            </div>
+
+            <button class="toggle-button" onclick="toggleBooks()">Show More</button>
+        </section>
+
+        <script>
+            function toggleBooks() {
+                const hiddenBooks = document.getElementById('hiddenBooks');
+                const button = document.querySelector('.toggle-button');
+                if (hiddenBooks.style.display === 'none' || hiddenBooks.style.display === '') {
+                    hiddenBooks.style.display = 'grid';
+                    button.textContent = 'Show Less';
+                } else {
+                    hiddenBooks.style.display = 'none';
+                    button.textContent = 'Show More';
+                }
+            }
+        </script>
+    </section>
+    <section class="literary-fiction">
+        <div class="category-title">Literary Fiction</div>
+
+        <section class="book-container">
+            <div class="book-grid">
+                <!-- First 10 Book Cards -->
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10512502-L.jpg" alt="The Goldfinch">
+                    <h3>The Goldfinch</h3>
+                    <p>Donna Tartt</p>
+                    <p>A story of art, loss, and identity following a stolen masterpiece.</p>
+                    <button
+                        onclick="rentBook('The Goldfinch', 'Donna Tartt', 'A story of art, loss, and identity following a stolen masterpiece.','https://covers.openlibrary.org/b/id/10512502-L.jpg',220)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10787202-L.jpg" alt="Normal People">
+                    <h3>Normal People</h3>
+                    <p>Sally Rooney</p>
+                    <p>An intense story of love, class, and personal growth.</p>
+                    <button
+                        onclick="rentBook('Normal People', 'Sally Rooney', 'An intense story of love, class, and personal growth.','https://covers.openlibrary.org/b/id/10787202-L.jpg',230)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10370817-L.jpg" alt="The Night Circus">
+                    <h3>The Night Circus</h3>
+                    <p>Erin Morgenstern</p>
+                    <p>A magical competition between two illusionists.</p>
+                    <button
+                        onclick="rentBook('The Night Circus', 'Erin Morgenstern','A magical competition between two illusionists.','https://covers.openlibrary.org/b/id/10370817-L.jpg',200)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10787445-L.jpg" alt="A Little Life">
+                    <h3>A Little Life</h3>
+                    <p>Hanya Yanagihara</p>
+                    <p>A deep, emotional story about friendship, trauma, and healing.</p>
+                    <button
+                        onclick="rentBook('A Little Life', 'Hanya Yanagihara','>A deep, emotional story about friendship, trauma, and healing.','https://covers.openlibrary.org/b/id/10787445-L.jpg',210)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10337088-L.jpg" alt="The Underground Railroad">
+                    <h3>The Underground Railroad</h3>
+                    <p>Colson Whitehead</p>
+                    <p>A tale of freedom and escape during slavery in the United States.</p>
+                    <button
+                        onclick="rentBook('The Underground Railroad', 'Colson Whitehead','A tale of freedom and escape during slavery in the United States.','https://covers.openlibrary.org/b/id/10337088-L.jpg',230)">Rent
+                        Now</button>
+                    <script>
+                        function rentBook(title, author, description, image, price) {
+                            const url = new URL('rent.html', window.location.href);
+                            url.searchParams.set('title', title);
+                            url.searchParams.set('author', author);
+                            url.searchParams.set('description', description);
+                            url.searchParams.set('image', image);
+                            url.searchParams.set('price', price);
+                            window.location.href = url.toString();
+                        }
+
+                    </script>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10373813-L.jpg" alt="Beloved">
+                    <h3>Beloved</h3>
+                    <p>Toni Morrison</p>
+                    <p>A powerful novel on slavery and motherhood.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10620857-L.jpg" alt="The Road">
+                    <h3>The Road</h3>
+                    <p>Cormac McCarthy</p>
+                    <p>A father and son’s survival in a post-apocalyptic world.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10609813-L.jpg" alt="Where the Crawdads Sing">
+                    <h3>Where the Crawdads Sing</h3>
+                    <p>Delia Owens</p>
+                    <p>A coming-of-age mystery in North Carolina’s marshes.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10568249-L.jpg" alt="The Secret History">
+                    <h3>The Secret History</h3>
+                    <p>Donna Tartt</p>
+                    <p>A gripping tale of a group of classics students and a murder.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://covers.openlibrary.org/b/id/10591925-L.jpg" alt="The Light We Lost">
+                    <h3>The Light We Lost</h3>
+                    <p>Jill Santopolo</p>
+                    <p>A heartbreaking novel about love and choices.</p>
+                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="triller">
+            <div class="category-title">Mystery/Thriller/Crime</div>
+
+            <section class="book-container">
+                <div class="book-grid">
+                    <!-- First 20 Book Cards -->
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/10512502-L.jpg" alt="Gone Girl">
+                        <h3>Gone Girl</h3>
+                        <p>Gillian Flynn</p>
+                        <p>A gripping psychological thriller about a missing wife and the secrets that surface.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/11061993-L.jpg"
+                            alt="The Girl with the Dragon Tattoo">
+                        <h3>The Girl with the Dragon Tattoo</h3>
+                        <p>Stieg Larsson</p>
+                        <p>A dark mystery involving murder, corruption, and an unlikely hacker.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/11349557-L.jpg" alt="The Silent Patient">
+                        <h3>The Silent Patient</h3>
+                        <p>Alex Michaelides</p>
+                        <p>A woman’s silence after a shocking crime.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/11220090-L.jpg" alt="Big Little Lies">
+                        <h3>Big Little Lies</h3>
+                        <p>Liane Moriarty</p>
+                        <p>A mystery surrounding a murder at a school trivia night.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/10581926-L.jpg" alt="The Woman in the Window">
+                        <h3>The Woman in the Window</h3>
+                        <p>A.J. Finn</p>
+                        <p>A psychological thriller involving a reclusive woman who spies on her neighbors.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/10823609-L.jpg" alt="Sharp Objects">
+                        <h3>Sharp Objects</h3>
+                        <p>Gillian Flynn</p>
+                        <p>A psychological thriller involving a journalist investigating a series of murders in her
+                            hometown.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/11353734-L.jpg" alt="The Girl on the Train">
+                        <h3>The Girl on the Train</h3>
+                        <p>Paula Hawkins</p>
+                        <p>A woman’s obsession with a couple’s life leads her into a web of mystery and deceit.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/10796402-L.jpg" alt="Before I Go to Sleep">
+                        <h3>Before I Go to Sleep</h3>
+                        <p>S.J. Watson</p>
+                        <p>A woman with amnesia wakes up every day with no memory of the previous day and must piece
+                            together her life.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/10575503-L.jpg" alt="In the Woods">
+                        <h3>In the Woods</h3>
+                        <p>Tana French</p>
+                        <p>A detective investigates a murder that’s connected to a dark secret from his childhood.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://covers.openlibrary.org/b/id/11135033-L.jpg" alt="The Cuckoo's Calling">
+                        <h3>The Cuckoo's Calling</h3>
+                        <p>Robert Galbraith (J.K. Rowling)</p>
+                        <p>A private detective investigates the suicide of a supermodel.</p>
+                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                    </div>
+                </div>
+
+                <br>
+            </section>
+            <section class="fantasy">
+                <div class="category-title">Fantasy</div>
+
+                <section class="book-container">
+                    <div class="book-grid">
+                        <!-- First 10 Book Cards -->
+                        <!-- Book 1 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10551224-L.jpg" alt="The Name of the Wind">
+                            <h3>The Name of the Wind</h3>
+                            <p>Patrick Rothfuss</p>
+                            <p>A story of a gifted young man, a legend in the making.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 2 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/11398998-L.jpg" alt="The Hobbit">
+                            <h3>The Hobbit</h3>
+                            <p>J.R.R. Tolkien</p>
+                            <p>The adventure of Bilbo Baggins in Middle Earth.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 3 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10220371-L.jpg"
+                                alt="Harry Potter and the Sorcerer's Stone">
+                            <h3>Harry Potter and the Sorcerer's Stone</h3>
+                            <p>J.K. Rowling</p>
+                            <p>The magical beginning of Harry Potter's journey.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 4 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10714974-L.jpg" alt="A Game of Thrones">
+                            <h3>A Game of Thrones</h3>
+                            <p>George R.R. Martin</p>
+                            <p>The epic battle for power in the Seven Kingdoms of Westeros.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 5 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10589576-L.jpg"
+                                alt="The Priory of the Orange Tree">
+                            <h3>The Priory of the Orange Tree</h3>
+                            <p>Samantha Shannon</p>
+                            <p>A feminist epic about dragons and a world on the brink of war.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 6 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10523592-L.jpg" alt="Circe">
+                            <h3>Circe</h3>
+                            <p>Madeline Miller</p>
+                            <p>The story of Circe, a witch from Greek mythology.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 7 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10582992-L.jpg" alt="The Blade Itself">
+                            <h3>The Blade Itself</h3>
+                            <p>Joe Abercrombie</p>
+                            <p>A gritty fantasy tale of war, betrayal, and survival.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 8 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10826179-L.jpg"
+                                alt="The Lies of Locke Lamora">
+                            <h3>The Lies of Locke Lamora</h3>
+                            <p>Scott Lynch</p>
+                            <p>A thrilling adventure of thieves and deception.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 9 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/10527948-L.jpg" alt="The Night Circus">
+                            <h3>The Night Circus</h3>
+                            <p>Erin Morgenstern</p>
+                            <p>A magical competition between two illusionists.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                        <!-- Book 10 -->
+                        <div class="book-card">
+                            <img src="https://covers.openlibrary.org/b/id/11133219-L.jpg"
+                                alt="Mistborn: The Final Empire">
+                            <h3>Mistborn: The Final Empire</h3>
+                            <p>Brandon Sanderson</p>
+                            <p>A unique magic system and a struggle against an immortal ruler.</p>
+                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                        </div>
+                    </div>
+
+                    <br>
+                </section>
+                <section class="science">
+                    <div class="category-title">Science</div>
+
+                    <section class="book-container">
+                        <div class="book-grid">
+                            <!-- First 10 Book Cards -->
+                            <!-- Book 1 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/11898133-L.jpg"
+                                    alt="A Brief History of Time">
+                                <h3>A Brief History of Time</h3>
+                                <p>Stephen Hawking</p>
+                                <p>An exploration of time, space, and the universe.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 2 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/10513010-L.jpg" alt="The Selfish Gene">
+                                <h3>The Selfish Gene</h3>
+                                <p>Richard Dawkins</p>
+                                <p>An influential work on evolutionary biology.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 3 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/10520447-L.jpg"
+                                    alt="Sapiens: A Brief History of Humankind">
+                                <h3>Sapiens: A Brief History of Humankind</h3>
+                                <p>Yuval Noah Harari</p>
+                                <p>A compelling account of the history of humanity.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 4 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/10646113-L.jpg" alt="Cosmos">
+                                <h3>Cosmos</h3>
+                                <p>Carl Sagan</p>
+                                <p>A sweeping survey of the universe, from science to philosophy.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 5 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/10253855-L.jpg"
+                                    alt="The Gene: An Intimate History">
+                                <h3>The Gene: An Intimate History</h3>
+                                <p>Siddhartha Mukherjee</p>
+                                <p>A deep dive into the science of genetics.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 6 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/11109165-L.jpg"
+                                    alt="The Immortal Life of Henrietta Lacks">
+                                <h3>The Immortal Life of Henrietta Lacks</h3>
+                                <p>Rebecca Skloot</p>
+                                <p>The story of Henrietta Lacks and her immortal cells.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 7 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/10924318-L.jpg"
+                                    alt="Astrophysics for People in a Hurry">
+                                <h3>Astrophysics for People in a Hurry</h3>
+                                <p>Neil deGrasse Tyson</p>
+                                <p>A concise guide to understanding the universe.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 8 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/11126345-L.jpg"
+                                    alt="The Origin of Species">
+                                <h3>The Origin of Species</h3>
+                                <p>Charles Darwin</p>
+                                <p>Darwin’s foundational work on evolution and natural selection.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 9 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/11135857-L.jpg"
+                                    alt="A Short History of Nearly Everything">
+                                <h3>A Short History of Nearly Everything</h3>
+                                <p>Bill Bryson</p>
+                                <p>An exploration of science’s biggest questions and discoveries.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                            <!-- Book 10 -->
+                            <div class="book-card">
+                                <img src="https://covers.openlibrary.org/b/id/11110130-L.jpg"
+                                    alt="The Man Who Knew Infinity">
+                                <h3>The Man Who Knew Infinity</h3>
+                                <p>Robert Kanigel</p>
+                                <p>The biography of mathematician Srinivasa Ramanujan.</p>
+                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                            </div>
+                        </div>
+
+                        <br>
+                    </section>
+                    <section class="history">
+                        <div class="category-title">Historical</div>
+
+                        <section class="book-container">
+                            <div class="book-grid">
+                                <!-- First 10 Book Cards -->
+                                <!-- Book 1 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/11522051-L.jpg"
+                                        alt="The Diary of a Young Girl">
+                                    <h3>The Diary of a Young Girl</h3>
+                                    <p>Anne Frank</p>
+                                    <p>The powerful and poignant diary of Anne Frank during WWII.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 2 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/8219384-L.jpg"
+                                        alt="The Guns of August">
+                                    <h3>The Guns of August</h3>
+                                    <p>Barbara W. Tuchman</p>
+                                    <p>A detailed account of the events leading to World War I.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 3 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/11187173-L.jpg"
+                                        alt="The Second World War">
+                                    <h3>The Second World War</h3>
+                                    <p>Winston Churchill</p>
+                                    <p>Winston Churchill's six-volume history of World War II.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 4 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/10190533-L.jpg"
+                                        alt="Sapiens: A Brief History of Humankind">
+                                    <h3>Sapiens: A Brief History of Humankind</h3>
+                                    <p>Yuval Noah Harari</p>
+                                    <p>A fascinating exploration of the history of human beings.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 5 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/11110983-L.jpg"
+                                        alt="The History of the Ancient World">
+                                    <h3>The History of the Ancient World</h3>
+                                    <p>Susan Wise Bauer</p>
+                                    <p>An engaging narrative of the rise and fall of ancient civilizations.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 6 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/10409563-L.jpg"
+                                        alt="A People's History of the United States">
+                                    <h3>A People's History of the United States</h3>
+                                    <p>Howard Zinn</p>
+                                    <p>An alternative view of American history, focusing on the people.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 7 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/10862457-L.jpg"
+                                        alt="The Civil War: A Narrative">
+                                    <h3>The Civil War: A Narrative</h3>
+                                    <p>Ken Burns</p>
+                                    <p>An in-depth look at the Civil War through personal accounts.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 8 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/10653545-L.jpg"
+                                        alt="The Roman Revolution">
+                                    <h3>The Roman Revolution</h3>
+                                    <p>Ronald Syme</p>
+                                    <p>How the Roman Republic collapsed and transformed into the Empire.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 9 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/10670237-L.jpg"
+                                        alt="The Rise and Fall of the Third Reich">
+                                    <h3>The Rise and Fall of the Third Reich</h3>
+                                    <p>William L. Shirer</p>
+                                    <p>A comprehensive history of Nazi Germany and its leaders.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                                <!-- Book 10 -->
+                                <div class="book-card">
+                                    <img src="https://covers.openlibrary.org/b/id/10631902-L.jpg"
+                                        alt="The French Revolution">
+                                    <h3>The French Revolution</h3>
+                                    <p>Georges Lefebvre</p>
+                                    <p>In-depth history of the French Revolution's causes and effects.</p>
+                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                </div>
+                            </div>
+
+                            <br>
+                        </section>
+                        <section class="romance">
+                            <div class="category-title">Romance</div>
+
+                            <section class="book-container">
+                                <div class="book-grid">
+                                    <!-- First 10 Book Cards -->
+                                    <!-- Book 1 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10467667-L.jpg"
+                                            alt="Pride and Prejudice">
+                                        <h3>Pride and Prejudice</h3>
+                                        <p>Jane Austen</p>
+                                        <p>A romantic tale about love and society’s expectations.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 2 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/11137878-L.jpg"
+                                            alt="The Notebook">
+                                        <h3>The Notebook</h3>
+                                        <p>Nicholas Sparks</p>
+                                        <p>A love story about a couple's enduring relationship despite obstacles.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 3 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10765185-L.jpg"
+                                            alt="Me Before You">
+                                        <h3>Me Before You</h3>
+                                        <p>Jojo Moyes</p>
+                                        <p>A love story that defies conventions and explores deep emotions.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 4 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10929443-L.jpg"
+                                            alt="The Fault in Our Stars">
+                                        <h3>The Fault in Our Stars</h3>
+                                        <p>John Green</p>
+                                        <p>A heart-wrenching romance between two teenagers dealing with cancer.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 5 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/11321577-L.jpg" alt="Twilight">
+                                        <h3>Twilight</h3>
+                                        <p>Stephenie Meyer</p>
+                                        <p>A young girl falls in love with a vampire in this supernatural romance.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 6 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10437932-L.jpg"
+                                            alt="The Rosie Project">
+                                        <h3>The Rosie Project</h3>
+                                        <p>Graeme Simsion</p>
+                                        <p>A quirky romance about a scientist looking for love.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 7 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10701909-L.jpg"
+                                            alt="The Hating Game">
+                                        <h3>The Hating Game</h3>
+                                        <p>Sally Thorne</p>
+                                        <p>A funny romance between two office rivals.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 8 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10121385-L.jpg" alt="Outlander">
+                                        <h3>Outlander</h3>
+                                        <p>Diana Gabaldon</p>
+                                        <p>A historical romance involving time travel and passionate love.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 9 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10499215-L.jpg"
+                                            alt="The Wedding Date">
+                                        <h3>The Wedding Date</h3>
+                                        <p>Jasmine Guillory</p>
+                                        <p>A romance that begins with a fake relationship and turns real.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                    <!-- Book 10 -->
+                                    <div class="book-card">
+                                        <img src="https://covers.openlibrary.org/b/id/10716902-L.jpg"
+                                            alt="Anna Karenina">
+                                        <h3>Anna Karenina</h3>
+                                        <p>Leo Tolstoy</p>
+                                        <p>A tragic love story set in 19th century Russia.</p>
+                                        <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                    </div>
+                                </div>
+
+                                <br>
+                            </section>
+                            <section class="biography">
+                                <div class="category-title">Biography and Autobiography</div>
+
+                                <section class="book-container">
+                                    <div class="book-grid">
+                                        <!-- First 10 Book Cards -->
+                                        <!-- Book 1 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/11310093-L.jpg"
+                                                alt="The Diary of a Young Girl">
+                                            <h3>The Diary of a Young Girl</h3>
+                                            <p>Anne Frank</p>
+                                            <p>The famous wartime diary of a Jewish girl in hiding.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 2 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/11509747-L.jpg"
+                                                alt="Long Walk to Freedom">
+                                            <h3>Long Walk to Freedom</h3>
+                                            <p>Nelson Mandela</p>
+                                            <p>The inspiring autobiography of the South African leader.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 3 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/12542945-L.jpg"
+                                                alt="Becoming">
+                                            <h3>Becoming</h3>
+                                            <p>Michelle Obama</p>
+                                            <p>The former First Lady’s powerful story of self-discovery.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 4 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/11462651-L.jpg"
+                                                alt="Steve Jobs">
+                                            <h3>Steve Jobs</h3>
+                                            <p>Walter Isaacson</p>
+                                            <p>The biography of the iconic tech entrepreneur.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 5 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/11168733-L.jpg"
+                                                alt="The Glass Castle">
+                                            <h3>The Glass Castle</h3>
+                                            <p>Jeannette Walls</p>
+                                            <p>An inspiring memoir of growing up in poverty with a dysfunctional family.
+                                            </p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 6 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/10648761-L.jpg"
+                                                alt="Educated">
+                                            <h3>Educated</h3>
+                                            <p>Tara Westover</p>
+                                            <p>A memoir about escaping an oppressive family and finding education.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 7 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/10389451-L.jpg"
+                                                alt="I Am Malala">
+                                            <h3>I Am Malala</h3>
+                                            <p>Malala Yousafzai</p>
+                                            <p>The memoir of the youngest Nobel Prize laureate.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 8 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/12594491-L.jpg"
+                                                alt="When Breath Becomes Air">
+                                            <h3>When Breath Becomes Air</h3>
+                                            <p>Paul Kalanithi</p>
+                                            <p>A memoir of a neurosurgeon who faced terminal cancer.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 9 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/10779892-L.jpg"
+                                                alt="The Wright Brothers">
+                                            <h3>The Wright Brothers</h3>
+                                            <p>David McCullough</p>
+                                            <p>The story of the brothers who pioneered human flight.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                        <!-- Book 10 -->
+                                        <div class="book-card">
+                                            <img src="https://covers.openlibrary.org/b/id/10618199-L.jpg"
+                                                alt="The Immortal Life of Henrietta Lacks">
+                                            <h3>The Immortal Life of Henrietta Lacks</h3>
+                                            <p>Rebecca Skloot</p>
+                                            <p>The story of a woman whose cells changed medical history.</p>
+                                            <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                </section>
+                                <section class="self-help">
+                                    <div class="category-title">Self-Help</div>
+
+                                    <section class="book-container">
+                                        <div class="book-grid">
+                                            <!-- First 10 Book Cards -->
+                                            <!-- Book 1 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10520625-L.jpg"
+                                                    alt="Atomic Habits">
+                                                <h3>Atomic Habits</h3>
+                                                <p>James Clear</p>
+                                                <p>Master the science of habits and build a better life.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 2 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10897151-L.jpg"
+                                                    alt="The Power of Now">
+                                                <h3>The Power of Now</h3>
+                                                <p>Eckhart Tolle</p>
+                                                <p>A guide to spiritual enlightenment and present-moment awareness.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 3 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10645477-L.jpg"
+                                                    alt="The Subtle Art of Not Giving a F*ck">
+                                                <h3>The Subtle Art of Not Giving a F*ck</h3>
+                                                <p>Mark Manson</p>
+                                                <p>A counterintuitive approach to living a better life.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 4 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10521780-L.jpg"
+                                                    alt="Think and Grow Rich">
+                                                <h3>Think and Grow Rich</h3>
+                                                <p>Napoleon Hill</p>
+                                                <p>A classic book on the psychology of success and wealth.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 5 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10896360-L.jpg"
+                                                    alt="You Are a Badass">
+                                                <h3>You Are a Badass</h3>
+                                                <p>Jen Sincero</p>
+                                                <p>A motivational book for people who want to stop self-sabotage.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 6 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10520571-L.jpg"
+                                                    alt="Dare to Lead">
+                                                <h3>Dare to Lead</h3>
+                                                <p>Brené Brown</p>
+                                                <p>Build a culture of courage and connection in leadership.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 7 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10742046-L.jpg"
+                                                    alt="The 7 Habits of Highly Effective People">
+                                                <h3>The 7 Habits of Highly Effective People</h3>
+                                                <p>Stephen R. Covey</p>
+                                                <p>A principle-centered approach for solving personal and professional
+                                                    problems.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 8 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10519828-L.jpg"
+                                                    alt="Grit">
+                                                <h3>Grit</h3>
+                                                <p>Angela Duckworth</p>
+                                                <p>Why passion and perseverance are the keys to success.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 9 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10522691-L.jpg"
+                                                    alt="The Four Agreements">
+                                                <h3>The Four Agreements</h3>
+                                                <p>Don Miguel Ruiz</p>
+                                                <p>A practical guide to personal freedom and happiness.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                            <!-- Book 10 -->
+                                            <div class="book-card">
+                                                <img src="https://covers.openlibrary.org/b/id/10606467-L.jpg"
+                                                    alt="The Miracle Morning">
+                                                <h3>The Miracle Morning</h3>
+                                                <p>Hal Elrod</p>
+                                                <p>A guide to transforming your life before 8AM.</p>
+                                                <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                            </div>
+                                        </div>
+
+                                        <br>
+                                    </section>
+                                    <section class="psychology">
+                                        <div class="category-title">Psychology</div>
+
+                                        <section class="book-container">
+                                            <div class="book-grid">
+                                                <!-- First 10 Book Cards -->
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10270677-L.jpg"
+                                                        alt="Thinking, Fast and Slow">
+                                                    <h3>Thinking, Fast and Slow</h3>
+                                                    <p>Daniel Kahneman</p>
+                                                    <p>A groundbreaking exploration of the human mind and
+                                                        decision-making.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10370840-L.jpg"
+                                                        alt="The Power of Habit">
+                                                    <h3>The Power of Habit</h3>
+                                                    <p>Charles Duhigg</p>
+                                                    <p>How habits form and how we can change them to improve our lives.
+                                                    </p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10664735-L.jpg"
+                                                        alt="The Psychopath Test">
+                                                    <h3>The Psychopath Test</h3>
+                                                    <p>Jon Ronson</p>
+                                                    <p>A fascinating look into the psychology of psychopathy.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10371068-L.jpg"
+                                                        alt="Man's Search for Meaning">
+                                                    <h3>Man's Search for Meaning</h3>
+                                                    <p>Viktor E. Frankl</p>
+                                                    <p>A powerful account of finding purpose in life, even in suffering.
+                                                    </p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10630644-L.jpg"
+                                                        alt="Quiet: The Power of Introverts">
+                                                    <h3>Quiet: The Power of Introverts</h3>
+                                                    <p>Susan Cain</p>
+                                                    <p>An exploration of how introverts can thrive in a world designed
+                                                        for extroverts.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10922861-L.jpg"
+                                                        alt="Grit: The Power of Passion and Perseverance">
+                                                    <h3>Grit: The Power of Passion and Perseverance</h3>
+                                                    <p>Angela Duckworth</p>
+                                                    <p>The science behind passion, perseverance, and achieving long-term
+                                                        goals.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10873025-L.jpg"
+                                                        alt="Influence: The Psychology of Persuasion">
+                                                    <h3>Influence: The Psychology of Persuasion</h3>
+                                                    <p>Robert B. Cialdini</p>
+                                                    <p>A classic on the principles of persuasion and how they shape our
+                                                        decisions.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10582517-L.jpg"
+                                                        alt="Outliers: The Story of Success">
+                                                    <h3>Outliers: The Story of Success</h3>
+                                                    <p>Malcolm Gladwell</p>
+                                                    <p>How culture, family, and timing shape success in life.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10168594-L.jpg"
+                                                        alt="The Happiness Hypothesis">
+                                                    <h3>The Happiness Hypothesis</h3>
+                                                    <p>Jonathan Haidt</p>
+                                                    <p>A deep dive into the psychology of happiness and well-being.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                                <div class="book-card">
+                                                    <img src="https://covers.openlibrary.org/b/id/10236718-L.jpg"
+                                                        alt="Predictably Irrational">
+                                                    <h3>Predictably Irrational</h3>
+                                                    <p>Dan Ariely</p>
+                                                    <p>An exploration of the hidden forces that shape our decisions.</p>
+                                                    <button onclick="window.location.href='rent.html'">Rent Now</button>
+                                                </div>
+                                            </div>
+
+                                            <br>
+
+                                        </section>
+                                        <section class="travel">
+                                            <div class="category-title">Travel</div>
+
+                                            <section class="book-container">
+                                                <div class="book-grid">
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/8281992-L.jpg"
+                                                            alt="Into the Wild">
+                                                        <h3>Into the Wild</h3>
+                                                        <p>Jon Krakauer</p>
+                                                        <p>The journey of Christopher McCandless into the Alaskan
+                                                            wilderness.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/10513188-L.jpg"
+                                                            alt="Eat, Pray, Love">
+                                                        <h3>Eat, Pray, Love</h3>
+                                                        <p>Elizabeth Gilbert</p>
+                                                        <p>A woman’s search for meaning through Italy, India, and
+                                                            Indonesia.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/7898781-L.jpg"
+                                                            alt="The Geography of Bliss">
+                                                        <h3>The Geography of Bliss</h3>
+                                                        <p>Eric Weiner</p>
+                                                        <p>One grump’s search for the happiest places in the world.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/7222555-L.jpg"
+                                                            alt="In Patagonia">
+                                                        <h3>In Patagonia</h3>
+                                                        <p>Bruce Chatwin</p>
+                                                        <p>A literary journey through the myths and geography of
+                                                            Patagonia.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/10505920-L.jpg"
+                                                            alt="Travels with Charley">
+                                                        <h3>Travels with Charley</h3>
+                                                        <p>John Steinbeck</p>
+                                                        <p>Steinbeck's road trip across America with his poodle,
+                                                            Charley.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/8192456-L.jpg"
+                                                            alt="Vagabonding">
+                                                        <h3>Vagabonding</h3>
+                                                        <p>Rolf Potts</p>
+                                                        <p>A guide to long-term travel and living on the road.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/7269774-L.jpg"
+                                                            alt="The Art of Travel">
+                                                        <h3>The Art of Travel</h3>
+                                                        <p>Alain de Botton</p>
+                                                        <p>Philosophical reflections on why and how we travel.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/8155572-L.jpg"
+                                                            alt="Wild">
+                                                        <h3>Wild</h3>
+                                                        <p>Cheryl Strayed</p>
+                                                        <p>A solo hike along the Pacific Crest Trail to find healing.
+                                                        </p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/8306662-L.jpg"
+                                                            alt="A Walk in the Woods">
+                                                        <h3>A Walk in the Woods</h3>
+                                                        <p>Bill Bryson</p>
+                                                        <p>Hiking the Appalachian Trail with wit and discovery.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                    <div class="book-card">
+                                                        <img src="https://covers.openlibrary.org/b/id/8052457-L.jpg"
+                                                            alt="The Beach">
+                                                        <h3>The Beach</h3>
+                                                        <p>Alex Garland</p>
+                                                        <p>A backpacker’s journey to a hidden beach paradise in
+                                                            Thailand.</p>
+                                                        <button onclick="window.location.href='rent.html'">Rent
+                                                            Now</button>
+                                                    </div>
+                                                </div>
+
+                                                <br>
+
+                                            </section>
+                                            <section class="religious">
+                                                <div class="category-title">Religious and Spirituality</div>
+
+                                                <section class="book-container">
+                                                    <div class="book-grid">
+                                                        <!-- First 10 Book Cards -->
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/8225636-L.jpg"
+                                                                alt="The Purpose Driven Life">
+                                                            <h3>The Purpose Driven Life</h3>
+                                                            <p>Rick Warren</p>
+                                                            <p>A spiritual guide to discovering your purpose.</p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/240726-L.jpg"
+                                                                alt="The Bhagavad Gita">
+                                                            <h3>The Bhagavad Gita</h3>
+                                                            <p>Translated by Eknath Easwaran</p>
+                                                            <p>A Hindu scripture on duty, life, and philosophy.</p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/11123336-L.jpg"
+                                                                alt="The Tao of Pooh">
+                                                            <h3>The Tao of Pooh</h3>
+                                                            <p>Benjamin Hoff</p>
+                                                            <p>Taoist wisdom explained through Winnie the Pooh.</p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/11222813-L.jpg"
+                                                                alt="Mere Christianity">
+                                                            <h3>Mere Christianity</h3>
+                                                            <p>C.S. Lewis</p>
+                                                            <p>A rational case for Christian beliefs and values.</p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/8230955-L.jpg"
+                                                                alt="The Book of Joy">
+                                                            <h3>The Book of Joy</h3>
+                                                            <p>Dalai Lama & Desmond Tutu</p>
+                                                            <p>Two great spiritual leaders reflect on lasting happiness.
+                                                            </p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/10989351-L.jpg"
+                                                                alt="The Art of Happiness">
+                                                            <h3>The Art of Happiness</h3>
+                                                            <p>Dalai Lama</p>
+                                                            <p>A spiritual approach to cultivating happiness and peace.
+                                                            </p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/8235111-L.jpg"
+                                                                alt="Man’s Search for Meaning">
+                                                            <h3>Man’s Search for Meaning</h3>
+                                                            <p>Viktor E. Frankl</p>
+                                                            <p>A Holocaust survivor’s spiritual journey and logotherapy.
+                                                            </p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/8232869-L.jpg"
+                                                                alt="The Power of Now">
+                                                            <h3>The Power of Now</h3>
+                                                            <p>Eckhart Tolle</p>
+                                                            <p>A guide to living in the present moment and
+                                                                enlightenment.</p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/10514839-L.jpg"
+                                                                alt="The Seven Storey Mountain">
+                                                            <h3>The Seven Storey Mountain</h3>
+                                                            <p>Thomas Merton</p>
+                                                            <p>A Trappist monk’s spiritual memoir of faith and
+                                                                conversion.</p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="book-card">
+                                                            <img src="https://covers.openlibrary.org/b/id/240755-L.jpg"
+                                                                alt="Autobiography of a Yogi">
+                                                            <h3>Autobiography of a Yogi</h3>
+                                                            <p>Paramahansa Yogananda</p>
+                                                            <p>A spiritual classic exploring yogic teachings and
+                                                                miracles.</p>
+                                                            <button onclick="window.location.href='rent.html'">Rent
+                                                                Now</button>
+                                                        </div>
+                                                    </div>
+
+                                                    <br>
+                                                </section>
+                                                <section class="kids">
+                                                    <div class="category-title">Kids</div>
+
+                                                    <section class="book-container">
+                                                        <div class="book-grid">
+                                                            <!-- First 10 Kids Book Cards -->
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/8228691-L.jpg"
+                                                                    alt="The Very Hungry Caterpillar">
+                                                                <h3>The Very Hungry Caterpillar</h3>
+                                                                <p>Eric Carle</p>
+                                                                <p>A caterpillar eats his way through a week and
+                                                                    transforms.</p>
+                                                                <button
+                                                                    onclick="rentBook('The Very Hungry Caterpillar', 'Eric Carle', 'A caterpillar eats his way through a way transforms.','https://covers.openlibrary.org/b/id/8228691-L.jpg',400)">Rent
+                                                                    Now</button>
+                                                                <script>
+                                                                    function rentBook(title, author, description, image, price) {
+                                                                        const url = new URL('rent.html', window.location.href);
+                                                                        url.searchParams.set('title', title);
+                                                                        url.searchParams.set('author', author);
+                                                                        url.searchParams.set('description', description);
+                                                                        url.searchParams.set('image', image);
+                                                                        url.searchParams.set('price', price);
+                                                                        window.location.href = url.toString();
+                                                                    }
+
+                                                                </script>
+
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/9641747-L.jpg"
+                                                                    alt="Where the Wild Things Are">
+                                                                <h3>Where the Wild Things Are</h3>
+                                                                <p>Maurice Sendak</p>
+                                                                <p>Max journeys to the land of the Wild Things.</p>
+                                                                <button
+                                                                    onclick="rentBook('Where the Wild Things Are', 'Maurice Sendak', 'Max journeys to the land of the Wild Things.','https://covers.openlibrary.org/b/id/9641747-L.jpg',410)">Rent
+                                                                    Now</button>
+                                                                <script>
+                                                                    function rentBook(title, author, description, image, price) {
+                                                                        const url = new URL('rent.html', window.location.href);
+                                                                        url.searchParams.set('title', title);
+                                                                        url.searchParams.set('author', author);
+                                                                        url.searchParams.set('description', description);
+                                                                        url.searchParams.set('image', image);
+                                                                        url.searchParams.set('price', price);
+                                                                        window.location.href = url.toString();
+                                                                    }
+
+                                                                </script>
+
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/9251326-L.jpg"
+                                                                    alt="Goodnight Moon">
+                                                                <h3>Goodnight Moon</h3>
+                                                                <p>Margaret Wise Brown</p>
+                                                                <p>A bedtime classic bidding goodnight to everything.
+                                                                </p>
+                                                                <button
+                                                                    onclick="rentBook('>Goodnight Moon', 'Margaret Wise Brown', 'A bedtime classic bidding goodnight to everything.','https://covers.openlibrary.org/b/id/9251326-L.jpg',450)">Rent
+                                                                    Now</button>
+                                                                <script>
+                                                                    function rentBook(title, author, description, image, price) {
+                                                                        const url = new URL('rent.html', window.location.href);
+                                                                        url.searchParams.set('title', title);
+                                                                        url.searchParams.set('author', author);
+                                                                        url.searchParams.set('description', description);
+                                                                        url.searchParams.set('image', image);
+                                                                        url.searchParams.set('price', price);
+                                                                        window.location.href = url.toString();
+                                                                    }
+
+                                                                </script>
+
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/9685365-L.jpg"
+                                                                    alt="Green Eggs and Ham">
+                                                                <h3>Green Eggs and Ham</h3>
+                                                                <p>Dr. Seuss</p>
+                                                                <p>Sam-I-Am encourages trying new things in rhyme.</p>
+                                                                <button
+                                                                    onclick="rentBook('Green Eggs and Ham', 'Dr. Seuss', 'Sam-I-Am encourages trying new things in rhyme.','https://covers.openlibrary.org/b/id/9685365-L.jpg',420)">Rent
+                                                                    Now</button>
+                                                                <script>
+                                                                    function rentBook(title, author, description, image, price) {
+                                                                        const url = new URL('rent.html', window.location.href);
+                                                                        url.searchParams.set('title', title);
+                                                                        url.searchParams.set('author', author);
+                                                                        url.searchParams.set('description', description);
+                                                                        url.searchParams.set('image', image);
+                                                                        url.searchParams.set('price', price);
+                                                                        window.location.href = url.toString();
+                                                                    }
+
+                                                                </script>
+
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/10874491-L.jpg"
+                                                                    alt="The Cat in the Hat">
+                                                                <h3>The Cat in the Hat</h3>
+                                                                <p>Dr. Seuss</p>
+                                                                <p>A mischievous cat turns a boring day into chaos.</p>
+                                                                <button
+                                                                    onclick="rentBook('The Cat in the Hat', 'Dr. Seuss', 'A mischievous cat turns a boring day into chaos.','https://covers.openlibrary.org/b/id/10874491-L.jpg',410)">Rent
+                                                                    Now</button>
+                                                                <script>
+                                                                    function rentBook(title, author, description, image, price) {
+                                                                        const url = new URL('rent.html', window.location.href);
+                                                                        url.searchParams.set('title', title);
+                                                                        url.searchParams.set('author', author);
+                                                                        url.searchParams.set('description', description);
+                                                                        url.searchParams.set('image', image);
+                                                                        url.searchParams.set('price', price);
+                                                                        window.location.href = url.toString();
+                                                                    }
+
+                                                                </script>
+
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/8114151-L.jpg"
+                                                                    alt="Brown Bear, Brown Bear, What Do You See?">
+                                                                <h3>Brown Bear, Brown Bear</h3>
+                                                                <p>Bill Martin Jr. & Eric Carle</p>
+                                                                <p>Colorful animals and rhythmic repetition for
+                                                                    toddlers.</p>
+                                                                <button onclick="window.location.href='rent.html'">Rent
+                                                                    Now</button>
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/10141965-L.jpg"
+                                                                    alt="Oh, the Places You’ll Go!">
+                                                                <h3>Oh, the Places You’ll Go!</h3>
+                                                                <p>Dr. Seuss</p>
+                                                                <p>A motivational journey through life’s ups and downs.
+                                                                </p>
+                                                                <button onclick="window.location.href='rent.html'">Rent
+                                                                    Now</button>
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/10530386-L.jpg"
+                                                                    alt="Don’t Let the Pigeon Drive the Bus!">
+                                                                <h3>Don’t Let the Pigeon Drive the Bus!</h3>
+                                                                <p>Mo Willems</p>
+                                                                <p>A pigeon tries to convince kids to let him drive a
+                                                                    bus.</p>
+                                                                <button onclick="window.location.href='rent.html'">Rent
+                                                                    Now</button>
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/11012924-L.jpg"
+                                                                    alt="The Snowy Day">
+                                                                <h3>The Snowy Day</h3>
+                                                                <p>Ezra Jack Keats</p>
+                                                                <p>Peter explores the joys of a snowy city day.</p>
+                                                                <button onclick="window.location.href='rent.html'">Rent
+                                                                    Now</button>
+                                                            </div>
+                                                            <div class="book-card">
+                                                                <img src="https://covers.openlibrary.org/b/id/10801491-L.jpg"
+                                                                    alt="Chicka Chicka Boom Boom">
+                                                                <h3>Chicka Chicka Boom Boom</h3>
+                                                                <p>Bill Martin Jr. & John Archambault</p>
+                                                                <p>Alphabet letters race up a coconut tree.</p>
+                                                                <button onclick="window.location.href='rent.html'">Rent
+                                                                    Now</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <br>
+                                                    </section>
+                                                    <section class="comics">
+                                                        <div class="category-title">Comics</div>
+
+                                                        <section class="book-container">
+                                                            <div class="book-grid">
+                                                                <!-- First 10 Book Cards -->
+                                                                <!-- Book 1 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/11187279-L.jpg"
+                                                                        alt="Watchmen">
+                                                                    <h3>Watchmen</h3>
+                                                                    <p>Alan Moore</p>
+                                                                    <p>A groundbreaking graphic novel about flawed
+                                                                        superheroes in a grim world.</p>
+                                                                    <button
+                                                                        onclick="rentBook('Watchmen', '>Alan Moore', 'A groundbreaking graphic novel about flawed superheroes in a grim world.','https://covers.openlibrary.org/b/id/11187279-L.jpg',210)">Rent
+                                                                        Now</button>
+                                                                    <script>
+                                                                        function rentBook(title, author, description, image, price) {
+                                                                            const url = new URL('rent.html', window.location.href);
+                                                                            url.searchParams.set('title', title);
+                                                                            url.searchParams.set('author', author);
+                                                                            url.searchParams.set('description', description);
+                                                                            url.searchParams.set('image', image);
+                                                                            url.searchParams.set('price', price);
+                                                                            window.location.href = url.toString();
+                                                                        }
+
+                                                                    </script>
+                                                                </div>
+                                                                <!-- Book 2 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10639531-L.jpg"
+                                                                        alt="The Dark Knight Returns">
+                                                                    <h3>The Dark Knight Returns</h3>
+                                                                    <p>Frank Miller</p>
+                                                                    <p>A dark and gritty story of Batman’s return to
+                                                                        Gotham in his later years.</p>
+                                                                    <button
+                                                                        onclick="rentBook('The Dark Knight Returns', 'Frank Miller', 'A dark and gritty story of Batman’s return to Gotham in his later years. ','https://covers.openlibrary.org/b/id/10639531-L.jpg',300)">Rent
+                                                                        Now</button>
+                                                                    <script>
+                                                                        function rentBook(title, author, description, image, price) {
+                                                                            const url = new URL('rent.html', window.location.href);
+                                                                            url.searchParams.set('title', title);
+                                                                            url.searchParams.set('author', author);
+                                                                            url.searchParams.set('description', description);
+                                                                            url.searchParams.set('image', image);
+                                                                            url.searchParams.set('price', price);
+                                                                            window.location.href = url.toString();
+                                                                        }
+
+                                                                    </script>
+                                                                </div>
+                                                                <!-- Book 3 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10825653-L.jpg"
+                                                                        alt="Spider-Man: Blue">
+                                                                    <h3>Spider-Man: Blue</h3>
+                                                                    <p>Jeph Loeb</p>
+                                                                    <p>A heartfelt look at Peter Parker's early days as
+                                                                        Spider-Man.</p>
+                                                                    <button
+                                                                        onclick="rentBook('Spider-Man: Blue', 'Jeph Loeb', 'A heartfelt look at Peter Parkers early days as Spider-Man.','https://covers.openlibrary.org/b/id/10825653-L.jpg',350)">Rent
+                                                                        Now</button>
+                                                                    <script>
+                                                                        function rentBook(title, author, description, image, price) {
+                                                                            const url = new URL('rent.html', window.location.href);
+                                                                            url.searchParams.set('title', title);
+                                                                            url.searchParams.set('author', author);
+                                                                            url.searchParams.set('description', description);
+                                                                            url.searchParams.set('image', image);
+                                                                            url.searchParams.set('price', price);
+                                                                            window.location.href = url.toString();
+                                                                        }
+
+                                                                    </script>
+
+                                                                </div>
+                                                                <!-- Book 4 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10673889-L.jpg"
+                                                                        alt="The Walking Dead: Compendium One">
+                                                                    <h3>The Walking Dead: Compendium One</h3>
+                                                                    <p>Robert Kirkman</p>
+                                                                    <p>The first volume of the iconic post-apocalyptic
+                                                                        zombie series.</p>
+                                                                    <button
+                                                                        onclick="rentBook('The Walking Dead: Compendium One', 'Robert Kirkman', 'The first volume of the iconic post-apocalyptic zombie series.','https://covers.openlibrary.org/b/id/10673889-L.jpg',280)">Rent
+                                                                        Now</button>
+                                                                    <script>
+                                                                        function rentBook(title, author, description, image, price) {
+                                                                            const url = new URL('rent.html', window.location.href);
+                                                                            url.searchParams.set('title', title);
+                                                                            url.searchParams.set('author', author);
+                                                                            url.searchParams.set('description', description);
+                                                                            url.searchParams.set('image', image);
+                                                                            url.searchParams.set('price', price);
+                                                                            window.location.href = url.toString();
+                                                                        }
+
+                                                                    </script>
+
+                                                                </div>
+                                                                <!-- Book 5 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10236751-L.jpg"
+                                                                        alt="Sandman: Preludes & Nocturnes">
+                                                                    <h3>Sandman: Preludes & Nocturnes</h3>
+                                                                    <p>Neil Gaiman</p>
+                                                                    <p>The first volume of Gaiman's dark, mythical
+                                                                        series about Dream.</p>
+                                                                    <button
+                                                                        onclick="rentBook('Sandman: Preludes & Nocturnes', 'Neil Gaiman', 'The first volume of Gaimans dark, mythical series about Dream.','https://covers.openlibrary.org/b/id/10236751-L.jpg',280)">Rent
+                                                                        Now</button>
+                                                                    <script>
+                                                                        function rentBook(title, author, description, image, price) {
+                                                                            const url = new URL('rent.html', window.location.href);
+                                                                            url.searchParams.set('title', title);
+                                                                            url.searchParams.set('author', author);
+                                                                            url.searchParams.set('description', description);
+                                                                            url.searchParams.set('image', image);
+                                                                            url.searchParams.set('price', price);
+                                                                            window.location.href = url.toString();
+                                                                        }
+
+                                                                    </script>
+
+                                                                </div>
+                                                                <!-- Book 6 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10709193-L.jpg"
+                                                                        alt="Maus">
+                                                                    <h3>Maus</h3>
+                                                                    <p>Art Spiegelman</p>
+                                                                    <p>A powerful recounting of the Holocaust, told
+                                                                        through the lens of a son and his father.
+                                                                    </p>
+                                                                    <button
+                                                                        onclick="window.location.href='rent.html'">Rent
+                                                                        Now</button>
+                                                                </div>
+                                                                <!-- Book 7 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10727276-L.jpg"
+                                                                        alt="Y: The Last Man">
+                                                                    <h3>Y: The Last Man</h3>
+                                                                    <p>Brian K. Vaughan</p>
+                                                                    <p>A post-apocalyptic journey following the last
+                                                                        surviving man on Earth.</p>
+                                                                    <button
+                                                                        onclick="window.location.href='rent.html'">Rent
+                                                                        Now</button>
+                                                                </div>
+                                                                <!-- Book 8 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10678042-L.jpg"
+                                                                        alt="Saga: Volume 1">
+                                                                    <h3>Saga: Volume 1</h3>
+                                                                    <p>Brian K. Vaughan</p>
+                                                                    <p>An epic space opera that blends family drama with
+                                                                        science fiction.</p>
+                                                                    <button
+                                                                        onclick="window.location.href='rent.html'">Rent
+                                                                        Now</button>
+                                                                </div>
+                                                                <!-- Book 9 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10247407-L.jpg"
+                                                                        alt="The Killing Joke">
+                                                                    <h3>The Killing Joke</h3>
+                                                                    <p>Alan Moore</p>
+                                                                    <p>A graphic novel that dives deep into the psyche
+                                                                        of the Joker and Batman.</p>
+                                                                    <button
+                                                                        onclick="window.location.href='rent.html'">Rent
+                                                                        Now</button>
+                                                                </div>
+                                                                <!-- Book 10 -->
+                                                                <div class="book-card">
+                                                                    <img src="https://covers.openlibrary.org/b/id/10822656-L.jpg"
+                                                                        alt="V for Vendetta">
+                                                                    <h3>V for Vendetta</h3>
+                                                                    <p>Alan Moore</p>
+                                                                    <p>A dystopian graphic novel about rebellion against
+                                                                        a fascist regime.</p>
+                                                                    <button
+                                                                        onclick="window.location.href='rent.html'">Rent
+                                                                        Now</button>
+                                                                </div>
+                                                            </div>
+
+                                                            <br>
+
+                                                        </section>
+</body>
+
+</html>

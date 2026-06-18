@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - Virtual Library</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #f0c040;
+    }
+
+    main {
+      text-align: center;
+      padding-top: 120px;
+      color: black;
+    }
+
+    .profile-info {
+      margin-top: 30px;
+      font-size: 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      display: inline-block;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .profile-info input {
+      padding: 8px;
+      margin-left: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .profile-info input:disabled {
+      background-color: #eee;
+    }
+
+    .profile-info button {
+      padding: 8px 16px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .profile-info button:hover {
+      background-color: #0056b3;
+    }
+
+    .details-section {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .details-section p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>📚 Virtual Library</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="rent.html">Rent</a>
+      <a href="about.html">About</a>
+      <a href="profile.html">Profile</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Welcome to Your Profile</h1>
+  <div class="profile-info">
+    <p><strong>Username:</strong>
+      <input type="text" id="usernameInput" disabled />
+    </p>
+    <p><strong>Email:</strong>
+      <input type="email" id="emailInput" disabled />
+    </p>
+
+    <div class="details-section">
+      <p><strong>Books Rented:</strong> <span id="booksRented">0</span></p>
+      <p><strong>Currently Reading:</strong> <span id="currentlyReading">None</span></p>
+      <p><strong>Joined On:</strong> <span id="joinDate">--</span></p>
+    </div>
+
+    <button id="editBtn" onclick="enableEdit()">Edit Profile</button>
+    <button id="saveBtn" onclick="saveProfile()" style="display:none;">Save Changes</button>
+  </div>
+</main>
+
+<script>
+  const usernameInput = document.getElementById("usernameInput");
+  const emailInput = document.getElementById("emailInput");
+  const editBtn = document.getElementById("editBtn");
+  const saveBtn = document.getElementById("saveBtn");
+
+  const email = localStorage.getItem("loggedInEmail");
+
+  if (email) {
+    // Fetch profile details from backend
+    fetch(`http://localhost:3000/api/profile?email=${encodeURIComponent(email)}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        usernameInput.value = data.username;
+        emailInput.value = data.email;
+        document.getElementById("booksRented").textContent = data.booksRented;
+        document.getElementById("currentlyReading").textContent = data.currentlyReading;
+        document.getElementById("joinDate").textContent = data.joinDate;
+      } else {
+        alert(data.error || "Failed to load profile.");
+      }
+    })
+    .catch(err => {
+      console.error("Error loading profile:", err);
+      alert("Server error loading profile details.");
+    });
+  } else {
+    alert("You are not logged in.");
+    window.location.href = "login.html";
+  }
+
+  function enableEdit() {
+    usernameInput.disabled = false;
+    emailInput.disabled = false;
+    saveBtn.style.display = "inline-block";
+    editBtn.style.display = "none";
+  }
+
+  function saveProfile() {
+    const newUsername = usernameInput.value.trim();
+    const newEmail = emailInput.value.trim();
+    const oldEmail = localStorage.getItem("loggedInEmail");
+
+    if (!newUsername || !newEmail) {
+      alert("Both username and email are required.");
+      return;
+    }
+
+    fetch('http://localhost:3000/api/profile', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        oldEmail: oldEmail,
+        newEmail: newEmail,
+        username: newUsername
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        localStorage.setItem("loggedInEmail", newEmail);
+        localStorage.setItem("loggedInUsername", newUsername);
+
+        usernameInput.disabled = true;
+        emailInput.disabled = true;
+        saveBtn.style.display = "none";
+        editBtn.style.display = "inline-block";
+
+        alert("Profile updated successfully!");
+        location.reload();
+      } else {
+        alert(data.error || "Failed to update profile.");
+      }
+    })
+    .catch(err => {
+      console.error("Error updating profile:", err);
+      alert("Server error updating profile.");
+    });
+  }
+</script>
+
+</body>
+</html>
